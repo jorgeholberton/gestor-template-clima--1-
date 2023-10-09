@@ -1,0 +1,57 @@
+* {
+  margin: 10;
+  padding: 10;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #FFFFFF;
+  display: flex; 
+  flex-direction: column; /* Alinea el contenido verticalmente */
+  justify-content: flex-start; /* Alinea el contenido en la parte superior */
+  align-items: center;
+  height: 100vh;  /* Usa la altura completa de la pantalla */
+  margin: 0;
+  color: yellow;
+  overflow: hidden; /* Evita que el contenido se desplace fuera de la pantalla */
+}
+
+.title {
+  color: white;
+  font-size: 30px;
+}
+
+.containerWeather {
+  text-align: left;
+  background-color: #ffffff;
+  height: 100vh; /* Usa la altura completa de la pantalla */ 
+  width: 65vh; 
+  background-image: url('images/clima2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px; /* Agrega espacio alrededor del contenido */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Agrega sombra */
+}
+
+.imagen {
+  display: none;
+} 
+
+button {
+  color: yellow;
+  background-color: rgb(82, 118, 236);
+  margin-top: 10px; /* Agrega margen superior a los botones */
+}
+
+/* Estilo para la clase "show" */
+.show {
+  /* Para asegurarse de que los elementos fluyan horizontalmente */
+  display: inline-block;
+}
+
+#weather-icon{
+/* Alinea la imagen a la izquierda */
+float: left;
+
+}

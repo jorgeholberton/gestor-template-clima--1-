@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+ <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <div class="containerWeather">
+    <p class="title">Weather App</p>
+   
+    <fieldset>
+      <legend>Know the Climate of your Region</legend>
+    <label><input type="radio" name="localizacion" id="por_ciudad" value="por_ciudad" checked> Por Nombre de Ciudad</label>
+    <br>
+    <label><input type="radio" name="localizacion" id="por_sitio" value="por_sitio"> Por Coordenadas Geográficas del Sitio</label>
+    <br>
+    <button onclick="seleccionarRadioButton()">Select Option</button>  
+  </fieldset>
+
+    <form id="search">
+      <input type="text" id="search-input" placeholder="Digita tu ciudad" />
+      <br>
+      <input type="number" step="0.0001" id="search-lat" placeholder="Digita la latitud geográfica de la ciudad" />
+      <br>
+      <input type="number" step="0.0001" id="search-lon" placeholder="Digita la longitud geográfica de la ciudad" />
+      <br>
+      <button type="submit" id="search-button">Search</button>
+      <br>
+      <button onclick="showPollution()" id="spollution-data">Show Pollution Data</button>
+      <br>
+      <button onclick="hidePollution()" id="hpollution-data">Hide Pollution Data</button>
+    </form>
+      
+    <div id="weather-icon">  
+    <img  class="imagen" src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="no"> 
+    </div> 
+      
+    <div id="search-result" ></div>
+    <div id="search-coordinates" ></div>
+    <div id="search-pollution" ></div>
+    
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
